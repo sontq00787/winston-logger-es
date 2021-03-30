@@ -7,14 +7,14 @@ const { Client } = require("@elastic/elasticsearch");
 const createAwsElasticsearchConnector = require("aws-elasticsearch-connector");
 
 module.exports = (awsConfig) => {
-  const awsConfig = new AWS.Config({
+  const config = new AWS.Config({
     region: awsConfig.REGION,
     accessKeyId: awsConfig.AWS_ES_ACCESS_KEY_ID,
     secretAccessKey: awsConfig.AWS_ES_SECRET_ACCESS_KEY,
   });
 
   const client = new Client({
-    ...createAwsElasticsearchConnector(awsConfig),
+    ...createAwsElasticsearchConnector(config),
     node: awsConfig.AWS_ES_ENDPOINT || "http://localhost:9200",
   });
 
