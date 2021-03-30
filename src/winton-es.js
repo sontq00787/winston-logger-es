@@ -29,7 +29,7 @@ const client = new Client({
 const esTransportOpts = {
   level: "info",
   client: client,
-  source: process.env.SERVICE_NAME || "notset",
+  source: process.env.SERVICE_NAME || "SERVICE_NAME_NOT_SET",
 };
 
 const esTransport = new ElasticsearchTransport(esTransportOpts);
