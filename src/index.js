@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports = (config) => ({
   ErrorHandler: require("./ErrorHandler"),
-  Logger: require("./winton-es"),
+  Logger: require("./winton-es")(config),
 });
