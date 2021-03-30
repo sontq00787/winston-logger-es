@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-npm i git_url_to_be_update
+npm i sontq00787/winston-logger-es
 ```
 
 ## Example usage
