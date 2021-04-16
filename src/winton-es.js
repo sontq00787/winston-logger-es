@@ -20,12 +20,12 @@ module.exports = (awsConfig) => {
       }),
     ],
 
-    format: winston.format.combine(
-      winston.format.timestamp({
-        format: "YYYY-MM-DD HH:mm:ss",
-      }),
-      winston.format.json()
-    ),
+    // format: winston.format.combine(
+    //   winston.format.timestamp({
+    //     format: "YYYY-MM-DD HH:mm:ss",
+    //   }),
+    //   winston.format.json()
+    // ),
   });
 
   logger.level = process.env.LOG_LEVEL || "info";
